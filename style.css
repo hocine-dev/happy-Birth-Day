@@ -1,0 +1,353 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+body {
+  background: #34e1ff;
+  font-family: "Ranchers";
+  overflow-x: hidden;
+  text-transform: capitalize;
+}
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.text {
+  min-width: 100%;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px #2c3a49;
+  font-size: 3em;
+}
+.text .char {
+  animation: slide-in 1s cubic-bezier(0.5, 0, 0.5, 1) both;
+  animation-delay: calc(60ms * var(--char-index));
+}
+@keyframes slide-in {
+  from {
+    transform: translateY(-1em) rotate(-150turn) scale(0.5);
+    opacity: 0;
+  }
+}
+.presents {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 200px;
+}
+.green {
+  position: relative;
+  left: -20px;
+  width: 100px;
+  height: 100px;
+  z-index: 1;
+}
+.green:hover {
+  animation: 0.5s green;
+}
+.green .lid {
+  background: #3ddc81;
+}
+.green .box {
+  background-image: radial-gradient(#fff 20%, transparent 20%),
+    radial-gradient(#fff 20%, transparent 20%);
+  background-color: #3ddc81;
+}
+.green .ribbon {
+  background: #f75d4c;
+}
+.green .ribbon::before {
+  top: 21%;
+}
+.green .bow {
+  background: #f75d4c;
+}
+.green .bow::before,
+.green .bow::after {
+  background: #f75d4c;
+}
+@keyframes green {
+  0% {
+    width: 100px;
+    height: 100px;
+  }
+  30% {
+    width: calc(100px + 10px);
+    height: calc(100px - 10px);
+  }
+  60% {
+    width: calc(100px - 10px);
+    height: calc(100px + 10px);
+  }
+  100% {
+    width: 100px;
+    height: 100px;
+  }
+}
+.orange {
+  position: relative;
+  left: 20px;
+  width: 130px;
+  height: 120px;
+  z-index: 10;
+}
+.orange:hover {
+  animation: 0.5s orange;
+}
+.orange .lid {
+  background: #ffa726;
+}
+.orange .box {
+  background-image: radial-gradient(#2c3a49 20%, transparent 20%),
+    radial-gradient(#2c3a49 20%, transparent 20%);
+  background-color: #ffa726;
+}
+.orange .ribbon {
+  background: #f75d4c;
+}
+.orange .ribbon::before {
+  top: 21%;
+}
+.orange .bow {
+  background: #f75d4c;
+}
+.orange .bow::before,
+.orange .bow::after {
+  background: #f75d4c;
+}
+@keyframes orange {
+  0% {
+    width: 130px;
+    height: 120px;
+  }
+  30% {
+    width: calc(130px + 10px);
+    height: calc(120px - 10px);
+  }
+  60% {
+    width: calc(130px - 10px);
+    height: calc(120px + 10px);
+  }
+  100% {
+    width: 130px;
+    height: 120px;
+  }
+}
+.blue {
+  position: relative;
+  left: 0;
+  width: 120px;
+  height: 160px;
+  z-index: 0;
+}
+.blue:hover {
+  animation: 0.5s blue;
+}
+.blue .lid {
+  background: #1bb5fe;
+}
+.blue .box {
+  background-image: radial-gradient(transparent 20%, transparent 20%),
+    radial-gradient(transparent 20%, transparent 20%);
+  background-color: #1bb5fe;
+}
+.blue .ribbon {
+  background: #3ddc81;
+}
+.blue .ribbon::before {
+  top: 21%;
+}
+.blue .bow {
+  background: #3ddc81;
+}
+.blue .bow::before,
+.blue .bow::after {
+  background: #3ddc81;
+}
+@keyframes blue {
+  0% {
+    width: 120px;
+    height: 160px;
+  }
+  30% {
+    width: calc(120px + 10px);
+    height: calc(160px - 10px);
+  }
+  60% {
+    width: calc(120px - 10px);
+    height: calc(160px + 10px);
+  }
+  100% {
+    width: 120px;
+    height: 160px;
+  }
+}
+.present {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+.present .lid {
+  height: 20%;
+  width: calc(100% + 10px);
+  border: 4px solid #2c3a49;
+  border-radius: 5px;
+  box-shadow: inset 2px 2px rgba(255, 255, 255, 0.5), 5px 0 rgba(0, 0, 0, 0.15);
+}
+.present .box {
+  width: 100%;
+  height: 100%;
+  background-position: 0 0, 20px 20px;
+  background-size: 40px 40px;
+  border: 4px solid #2c3a49;
+  border-top: 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: inset -10px 5px rgba(0, 0, 0, 0.3), 5px 0 rgba(0, 0, 0, 0.15);
+}
+.present .ribbon {
+  position: absolute;
+  top: -3px;
+  width: 30px;
+  height: calc(100% - 5px);
+  border: 4px solid #2c3a49;
+  border-radius: 5px;
+  box-shadow: inset 2px 2px rgba(255, 255, 255, 0.5);
+}
+.present .ribbon::before {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background: rgba(0, 0, 0, 0.3);
+}
+.present .bow {
+  position: absolute;
+  top: -20px;
+  width: 20px;
+  height: 20px;
+  border: 4px solid #2c3a49;
+  border-radius: 50%;
+  box-shadow: inset 2px 2px rgba(255, 255, 255, 0.5),
+    inset -2px -5px rgba(0, 0, 0, 0.3);
+}
+.present .bow::before,
+.present .bow::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: -10px;
+  width: 30px;
+  height: 30px;
+  border: 4px solid #2c3a49;
+  border-radius: 50%;
+  box-shadow: inset 2px 2px rgba(255, 255, 255, 0.5),
+    inset -2px -5px rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+.present .bow::before {
+  left: 15px;
+}
+.present .bow::after {
+  right: 15px;
+}
+
+/****************************************************************************/
+
+@font-face {
+  font-family: "Sigmar One";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/sigmarone/v15/co3DmWZ8kjZuErj9Ta3do6Tpow.ttf)
+    format("truetype");
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.blob {
+  height: 50px;
+  width: 50px;
+  color: #ffcc00;
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  z-index: 1;
+  font-size: 30px;
+  display: none;
+}
+.input {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 2px;
+  padding: 1.4rem 2rem 1.6rem;
+}
+.input:after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 999;
+  height: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-position: 0% 0%;
+  background: linear-gradient(
+    to right,
+    #b294ff,
+    #57e6e6,
+    #feffb8,
+    #57e6e6,
+    #b294ff,
+    #57e6e6
+  );
+  background-size: 500% auto;
+  animation: gradient 3s linear infinite;
+}
+.input input {
+  flex-grow: 1;
+  color: black;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  vertical-align: middle;
+  text-align: center;
+  margin: 1%;
+  border-radius: 20px;
+}
+input::placeholder {
+  text-transform: capitalize;
+}
+.input input[type="submit"] {
+  color: black;
+  font-size: 2rem;
+  line-height: 2rem;
+  vertical-align: middle;
+  transition: color 0.25s;
+  background-color: #b0f3f3;
+  width: 50%;
+  margin: auto;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+#info {
+  color: black;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  margin-top: 1%;
+  display: none;
+}

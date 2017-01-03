@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday !</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="/favicon.ico">
+    <!-- Font Awesome CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
+    <!-- jQuery JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!-- TweenMax JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <!-- Underscore JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.2/underscore-min.js"></script>
+  </head>
+  <body>
+    <audio
+      src="Happy Birthday song (mp3cut.net).mp3"
+      id="aud"
+    ></audio>
+
+    <div class="input" id="inp">
+      <input
+        type="text"
+        name="usr"
+        id="usr"
+        required
+        placeholder="Please enter the password"
+      />
+      <input type="submit" value="submit" id="sbm" />
+      <div id="info">incorrect password !</div>
+    </div>
+
+    <div class="container congrats" id="cgr">
+      <div class="text" data-splitting="">
+        <h1 style="font-size: 35px; font-family: verdana">Happy Birthday!</h1>
+      </div>
+      <div class="text" data-splitting="">
+        <h1 style="color: #f71f6f" id="h1u"></h1>
+      </div>
+      <br />
+      <br />
+      <div class="presents">
+        <div class="present orange">
+          <div class="lid"></div>
+          <div class="box"></div>
+          <div class="bow"></div>
+          <div class="ribbon"></div>
+        </div>
+        <div class="present blue">
+          <div class="lid"></div>
+          <div class="box"></div>
+          <div class="bow"></div>
+          <div class="ribbon"></div>
+        </div>
+        <div class="present green">
+          <div class="lid"></div>
+          <div class="box"></div>
+          <div class="bow"></div>
+          <div class="ribbon"></div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

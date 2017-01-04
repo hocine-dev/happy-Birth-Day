@@ -7,7 +7,7 @@ document.getElementById('sbm').onclick = function (){
 
 	if ( user == "hocine_dev"){
 	document.getElementById('inp').remove();
-	document.getElementById('h1u').innerHTML = `${"Laeticia" || 'user'} !`
+	document.getElementById('h1u').innerHTML = `${"Hocine" || 'user'} !`
 	document.getElementById('cgr').style.display='block';
 	document.getElementById('aud').play();
 	if(document.getElementById('info')){document.getElementById('info').style.display='none';}
